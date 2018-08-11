@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { AppService } from './app.service';
+import { AddFormComponent } from './add-form/add-form.component';
+import { ViewResultComponent } from './view-result/view-result.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddFormComponent,
+    ViewResultComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AppService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

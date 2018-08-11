@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  siteUrl: 'https://bagau.github.io/divider/'
 };

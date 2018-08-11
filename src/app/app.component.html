@@ -1,38 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container page-container">
-  <h3 class="main-title">Application makes few URLs from original URL for share with anyone.</h3>
-  <div class="row">
-    <div class="col-md-8">
-      <div class="shared-form">
-        <div class="divider-subtitle">Set your original URL in input below.</div>
-        <form>
-          <div class="row">
-            <div class="col-md-9">
-              <div class="form-group">
-                <input type="text" class="form-control" id="shared-text" name="shared-text" placeholder="Enter your shared URL..." [(ngModel)]="sharedText">
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                <input type="number" class="form-control" id="shared-count" name="shared-count" placeholder="URL count" [(ngModel)]="sharedCount">
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary" (click)="shareSubmit()">Change link</button>
-        </form>
-      </div>
-
-      <div class="get-shared" *ngIf="resultArray.length > 0">
-        <div class="divider-subtitle">Copy changed URL to clipboard.</div>
-
-        <div class="form-group" *ngFor="let item of resultArray; let i = index;">
-          <input type="text" class="form-control" id="result-text" placeholder="Enter your shared URL..." [value]="item" *ngIf="item !== ''">
-        </div>
-
-        <!--<textarea id="textarea"></textarea>
-        <br>
-        <button onclick="copy()">Copy</button>-->
-      </div>
-    </div>
-  </div>
+  <app-add-form *ngIf="!isView"></app-add-form>
+  <app-view-result *ngIf="isView"></app-view-result>
 </div>
