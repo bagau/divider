@@ -1,5 +1,8 @@
 # Divider
 
+Application makes few links from shared link. You may share few links for anyone. Anyone must open each link for getting one shared link.
+Working application is here [https://bagau.github.io/divider/](https://bagau.github.io/divider/).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
